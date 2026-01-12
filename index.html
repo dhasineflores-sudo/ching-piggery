@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Piggery Business</title>
+
+<style>
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #2e7d32;
+  padding: 10px 0;
+  z-index: 1000;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: #c8e6c9;
+  text-decoration: none;
+  padding: 6px 10px;
+  font-weight: bold;
+}
+
+nav a.active {
+  color: #fff;
+  border-top: 2px solid #ffeb3b;
+  border-bottom: 2px solid #ffeb3b;
+}
+
+section {
+  padding: 100px 20px;
+  min-height: 100vh;
+}
+
+h1, h2 {
+  text-align: center;
+  color: #2e7d32;
+}
+
+.cards {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 280px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card div {
+  padding: 15px;
+}
+
+.search-box {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.search-box input {
+  width: 80%;
+  max-width: 400px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.result {
+  max-width: 700px;
+  margin: auto;
+}
+
+footer {
+  background: #2e7d32;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<nav>
+  <a href="#home" class="nav-link active">Home</a>
+  <a href="#products" class="nav-link">Products</a>
+  <a href="#about" class="nav-link">About</a>
+  <a href="#contact" class="nav-link">Contact</a>
+  <a href="#help" class="nav-link">Help</a>
+</nav>
+</header>
+
+<!-- HOME -->
+<section id="home">
+<h1>Ching's Piggery Business 🐷</h1>
+<div class="cards">
+  <div class="card">
+    <img src="white-pig1.png" alt="White Pig">
+    <div>
+      <h3>White Pigs</h3>
+      <p>Commercial white pigs raised with proper nutrition for high-quality meat production.</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="black-pig1.png" alt="Black Pig">
+    <div>
+      <h3>Black Pigs</h3>
+      <p>Native black pigs known for lean meat, natural growth, and excellent taste.</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="long-business.png" alt="Years of Experience">
+    <div>
+      <h3>Years of Experience</h3>
+      <p>We’ve been in the piggery business for many years, serving trusted customers.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- PRODUCTS -->
+<section id="products">
+<h2>Our Products</h2>
+<div class="cards">
+  <div class="card">
+    <img src="white-pig2.png" alr="White Pig2">
+    <div>
+      <h3>White Commercial Pig</h3>
+      <p>Ideal for large-scale meat production with fast growth and quality yield.</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="black-native2.png" alt="Black Pig2">
+    <div>
+      <h3>Black Native Pig</h3>
+      <p>Organically raised native pigs, popular for traditional dishes.</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="lechon1.png" alt="Pork Products">
+    <div>
+      <h3>Pork Products - Lechon</h3>
+      <p>Fresh and newly butchered porks are processed with care and meticulously cooked.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+<h2>About Us</h2>
+<p style="max-width:700px;margin:auto;text-align:center;">
+We are a locally owned piggery business operating for years focused on quality, cleanliness, and customer trust.
+Our pigs are raised ethically with proper care and feeding practices.
+</p>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+<h2>Contact Us</h2>
+<p style="text-align:center;">
+📞 Phone: 09368084456<br>
+📍 Location: Barangay Commonwealth, Quezon City<br>
+📧 Email: <a href="mailto:chingpiggery@gmail.com" title="Goes to email" target="_blank">chingpiggery@gmail.com</a>
+</p>
+
+
+</section>
+
+<!-- HELP -->
+<section id="help">
+<h2>Help & FAQs</h2>
+
+<div class="search-box">
+  <input type="text" id="searchInput" placeholder="Search questions or topics..." onkeyup="searchHelp()">
+</div>
+
+<div class="result" id="results">
+  <p><strong>Do you sell live pigs?</strong><br>Yes, we sell live pigs for raising or to butcher.</p>
+  <p><strong>Do you offer pork meat?</strong><br>Yes, fresh pork is available.</p>
+  <p><strong>Are your pigs vaccinated?</strong><br>Yes, proper health management is strictly followed.</p>
+  <p><strong>Do you sell processed pork products?</strong><br>No, we do not sell processed pork products of any kind.</p>
+</div>
+</section>
+
+<footer>
+<p>© 2026 Piggery Business</p>
+</footer>
+
+<script>
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll(".nav-link");
+
+window.addEventListener("scroll", () => {
+  let current = "";
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop - 120;
+    if (scrollY >= sectionTop) {
+      current = section.getAttribute("id");
+    }
+  });
+
+  navLinks.forEach(link => {
+    link.classList.remove("active");
+    if (link.getAttribute("href") === "#" + current) {
+      link.classList.add("active");
+    }
+  });
+});
+
+/* SEARCH FUNCTION */
+function searchHelp() {
+  let input = document.getElementById("searchInput").value.toLowerCase();
+  let results = document.getElementById("results");
+  let texts = results.getElementsByTagName("p");
+
+  for (let i = 0; i < texts.length; i++) {
+    let txt = texts[i].innerText.toLowerCase();
+    texts[i].style.display = txt.includes(input) ? "" : "none";
+  }
+}
+</script>
+
+</body>
+</html>
