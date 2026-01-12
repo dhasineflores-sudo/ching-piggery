@@ -102,6 +102,31 @@ footer {
   text-align: center;
   padding: 10px;
 }
+
+/* RESPONSIVE ADJUSTMENTS */
+@media (max-width: 768px) {
+  .cards {
+    flex-direction: column; /* stack cards vertically on mobile */
+    align-items: center;
+  }
+
+  section {
+    padding: 80px 15px; /* reduce padding on mobile */
+  }
+}
+
+@media (min-width: 769px) {
+  .cards {
+    flex-direction: row; /* horizontal on desktop */
+    justify-content: center;
+  }
+
+  section {
+    padding: 80px 50px; /* reduce top/bottom padding slightly */
+    min-height: auto; /* remove extra large height */
+  }
+}
+  
 </style>
 </head>
 
